@@ -116,8 +116,10 @@ public class Main
         int yearLastAppearance = 1975;
         int yearCurrent = 2025;
         int offset = yearCurrent - yearLastAppearance;
-        int yearStart = yearLastAppearance - ((200 - offset) / period) * period;
-        int yearFinish = yearLastAppearance + ((100 + offset) / period) * period;
+        int dLeft = 200;
+        int dRight = 100;
+        int yearStart = yearLastAppearance - ((dLeft - offset) / period) * period;
+        int yearFinish = yearLastAppearance + ((dRight + offset) / period) * period;
         for (int year = yearStart; year <= yearFinish; year += period)
         {
             System.out.println(year);
