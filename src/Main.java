@@ -97,9 +97,23 @@ public class Main
             sum += sumStep;
             if (monthCount % 6 == 0)
             {
-                year+=0.5f;
+                year += 0.5f;
                 System.out.println("год " + year + " сумма накоплений равна " + sum + " рублей");
             }
         }
+        System.out.println();
+
+        // ex 7
+        System.out.println("ex7");
+        int daysMax = 31;
+        int dayFriday = 4;
+        for (int day = dayFriday; day <= daysMax; day+=7)
+        {
+            System.out.println("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
+        }
+        System.out.println();
+
+        // ex 8
+
     }
 }
