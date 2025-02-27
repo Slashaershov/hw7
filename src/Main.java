@@ -36,6 +36,7 @@ public class Main
             x--;
         }
         System.out.println();
+        System.out.println();
 
         //ex 3
         int population = 12000000;
@@ -43,7 +44,6 @@ public class Main
         int mortality = 8;
         int per = 1000;
         int d = per + natality - mortality;
-        System.out.println(d);
         for (var year = 1; year <= 10; year++)
         {
             population = population / per * d;
@@ -58,12 +58,13 @@ public class Main
         float perceprion = 1.07f;
         while (sum < sumMax)
         {
-            sum *= perceprion;
+            sum = (int) ((sum + sumStep) * perceprion);
             monthCount++;
             System.out.println("Месяц " + monthCount + " сумма накоплений равна " + sum + " рублей");
         }
         System.out.println();
 
         //ex 5
+
     }
 }
