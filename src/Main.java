@@ -52,19 +52,34 @@ public class Main
         System.out.println();
 
         //ex 4
+        sum = 0;
         sumMax = 12000000;
         sumStep = 15000;
         monthCount = 0;
         float perceprion = 1.07f;
         while (sum < sumMax)
         {
-            sum = (int) ((sum + sumStep) * perceprion);
+            sum = (int) (sum * perceprion) + sumStep;
             monthCount++;
             System.out.println("Месяц " + monthCount + " сумма накоплений равна " + sum + " рублей");
         }
         System.out.println();
 
         //ex 5
-
+        System.out.println("ex5");
+        sum = 0;
+        sumMax = 12000000;
+        sumStep = 15000;
+        monthCount = 0;
+        while (sum < sumMax)
+        {
+            sum = (int) (sum * perceprion) + sumStep;
+            monthCount++;
+            if (monthCount % 6 == 0)
+            {
+                System.out.println("Месяц " + monthCount + " сумма накоплений равна " + sum + " рублей");
+            }
+        }
+        System.out.println();
     }
 }
