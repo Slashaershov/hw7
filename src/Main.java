@@ -1,3 +1,5 @@
+import java.awt.geom.Arc2D;
+
 public class Main
 {
     public static void main(String[] args)
@@ -70,6 +72,7 @@ public class Main
         sum = 0;
         sumMax = 12000000;
         sumStep = 15000;
+        perceprion = 1.07f;
         monthCount = 0;
         while (sum < sumMax)
         {
@@ -81,5 +84,22 @@ public class Main
             }
         }
         System.out.println();
+
+        //ex6
+        System.out.println("ex6");
+        int monthCountMax = 9 * 12;
+        sumStep = 15000;
+        perceprion = 1.07f;
+        sum = 0;
+        float year = 0;
+        for (monthCount = 1; monthCount <= monthCountMax; monthCount++)
+        {
+            sum += sumStep;
+            if (monthCount % 6 == 0)
+            {
+                year+=0.5f;
+                System.out.println("год " + year + " сумма накоплений равна " + sum + " рублей");
+            }
+        }
     }
 }
