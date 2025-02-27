@@ -1,5 +1,3 @@
-import java.awt.geom.Arc2D;
-
 public class Main
 {
     public static void main(String[] args)
@@ -91,14 +89,14 @@ public class Main
         sumStep = 15000;
         perceprion = 1.07f;
         sum = 0;
-        float year = 0;
+        float yearAccumulation = 0;
         for (monthCount = 1; monthCount <= monthCountMax; monthCount++)
         {
             sum += sumStep;
             if (monthCount % 6 == 0)
             {
-                year += 0.5f;
-                System.out.println("год " + year + " сумма накоплений равна " + sum + " рублей");
+                yearAccumulation += 0.5f;
+                System.out.println("год " + yearAccumulation + " сумма накоплений равна " + sum + " рублей");
             }
         }
         System.out.println();
@@ -107,13 +105,22 @@ public class Main
         System.out.println("ex7");
         int daysMax = 31;
         int dayFriday = 4;
-        for (int day = dayFriday; day <= daysMax; day+=7)
+        for (int day = dayFriday; day <= daysMax; day += 7)
         {
-            System.out.println("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
         }
         System.out.println();
 
         // ex 8
-
+        int period = 79;
+        int yearLastAppearance = 1975;
+        int yearCurrent = 2025;
+        int offset = yearCurrent - yearLastAppearance;
+        int yearStart = yearLastAppearance - ((200 - offset) / period) * period;
+        int yearFinish = yearLastAppearance + ((100 + offset) / period) * period;
+        for (int year = yearStart; year <= yearFinish; year += period)
+        {
+            System.out.println(year);
+        }
     }
 }
