@@ -12,8 +12,8 @@ public class Main
         {
             sum += sumStep;
             monthCount++;
+            System.out.println("Месяц " + monthCount + " сумма накоплений равна " + sum + " рублей");
         }
-        System.out.println("Месяц " + monthCount + " сумма накоплений равна " + sum + " рублей");
         System.out.println();
 
         //ex2
@@ -29,11 +29,9 @@ public class Main
 
         xStart = 10;
         xFinish = 1;
-        x = xStart;
-        while (x >= xFinish)
+        for (x=xStart; x>=xFinish; x--)
         {
             System.out.print(x + " ");
-            x--;
         }
         System.out.println();
         System.out.println();
